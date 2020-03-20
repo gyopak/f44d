@@ -1,6 +1,7 @@
 from jinja2 import Environment, FileSystemLoader
 import json
 import feedparser
+import re
 import time
 
 url = "https://444.hu/feed"
@@ -16,6 +17,9 @@ def ping():
     posts = []
     for feed in get_feed():
         content = feed.content[0].value
+        # content = re.sub(r'http+', '', content)
+        content = re.sub(r'src="/+', '', content)
+        content = re.sub(r'xlink:href+', '', content)
         posts.append({
             "author": feed.author,
             "title": feed.title,

@@ -1,13 +1,14 @@
 * {
     margin: 0;
     transition: all 0.35s ease;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Helvetica, sans-serif;
     font-weight: 300;
 }
 
 header {
     zoom: 0.8;
     backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
     position: fixed;
     width: 100%;
     height: 3rem;
@@ -47,6 +48,8 @@ path.dark {
 
 .posts {
   width: 100vw;
+  max-width: 1000px;
+  margin: auto;
   overflow: hidden;
   padding-top: 3rem;
 }
@@ -56,9 +59,74 @@ path.dark {
 }
 
 .post > h2 {
+  font-size: 2rem;
+}
+
+.post > .post-body {
+  display: none;
+}
+
+.post-body > figure {
+  display: none;
+}
+
+.post-body > p {
+  padding: 0.5rem;
+  padding-top: 1rem;
+  font-size: 1.5rem;
+  line-height: 1.3;
+  color: black;
+}
+
+.post-body > blockquote {
+  display: block;
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  font-style: italic;
+  color: black;
+}
+
+.post-body > blockquote.dark {
+  color: white;
+}
+
+.post-body > p > * {
+  color: black;
+}
+
+.post-body > p > *.dark {
+  color: white;
+}
+
+.post-body > p > mark {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.post-body > ul {
+  padding: 1rem 2rem 0;
+}
+
+.post-body > ul > li {
+  font-size: 1.5rem;
+  padding-bottom: 1rem;
+}
+
+.post-body > p.dark {
+  color: white;
+}
+
+
+
+.post.open > .post-body {
+  display: block;
+}
+
+.post > h2 {
   border-left: 4px solid black;
   padding-left: 0.5rem;
   color: black;
+  cursor: pointer;
 }
 
 .post > h2.dark {
@@ -68,19 +136,18 @@ path.dark {
 
 .posts.dark, body.dark {
   color: white;
-  background: rgba(0,0,0,0.9);
+  background: black;
 }
 
 .switch-wrapper {
-  zoom: 0.6;
-  height: 3rem;
-  width: 7em;
+  height: 1.5rem;
+  width: 3.5rem;
   background: #3c4145;
   position: absolute;
   border: 0.2rem solid #333;
   overflow: hidden;
-  top: 2.5rem;
-  right: -3rem;
+  top: 1.5rem;
+  right: -1.5rem;
   transform: translate(-50%, -50%);
   border-radius: 2rem;
   transition: all 0.35s ease;
@@ -90,24 +157,24 @@ path.dark {
 }
 .switch-wrapper.active {
   background: #ffff73;
-  border: 0.2rem solid #333;
+  border: 0.2rem solid black;
 }
 
 .switch {
   position: absolute;
   z-index: 2;
   transition: all 0.35s ease;
-  margin: 0.25rem;
-  height: 2.5rem;
-  width: 2.5rem;
-  left: 0;
+  height: 1rem;
+  width: 1.05rem;
+  left: 0.25rem;
+  top: 0.25rem;
   border-radius: 1.5rem;
   background: #ffffff;
   border: 0.2rem solid #333;
   box-sizing: border-box;
 }
 .active .switch {
-  left: 4rem;
+  left: 2.25rem;
 }
 
 .active .switch {
