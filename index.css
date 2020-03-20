@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    transition: all 0.35s ease;
+}
+
+header {
+    zoom: 0.8;
+    backdrop-filter: blur(5px);
+    position: fixed;
+    width: 100%;
+    height: 3rem;
+    display: flex;
+    border-bottom: 2px solid black;
+}
+
+header.dark {
+    background: rgba(0,0,0,0.3);
+}
+
+.logo {
+    width: 100px;
+    padding: 0.5rem;
+}
+
+g {
+    fill: black;
+    stroke: black;
+}
+
+path {
+    fill: black;
+    stroke: black;
+}
+
+g.dark {
+    fill: #ffff73;
+    stroke: #ffff73;
+}
+
+path.dark {
+    fill: #ffff73;
+    stroke: #ffff73;
+}
+
+.posts {
+  width: 100vw;
+  overflow: hidden;
+  padding-top: 3rem;
+}
+
+.posts.dark, body.dark {
+  color: white;
+  background: rgba(0,0,0,0.9);
+}
+
+.switch-wrapper {
+  zoom: 0.6;
+  height: 3rem;
+  width: 7em;
+  background: #3c4145;
+  position: absolute;
+  border: 0.2rem solid #333;
+  overflow: hidden;
+  top: 2.5rem;
+  right: -3rem;
+  transform: translate(-50%, -50%);
+  border-radius: 2rem;
+  transition: all 0.35s ease;
+}
+.switch-wrapper:hover {
+  cursor: pointer;
+}
+.switch-wrapper.active {
+  background: #ffff73;
+  border: 0.2rem solid #333;
+}
+
+.switch {
+  position: absolute;
+  z-index: 2;
+  transition: all 0.35s ease;
+  margin: 0.25rem;
+  height: 2.5rem;
+  width: 2.5rem;
+  left: 0;
+  border-radius: 1.5rem;
+  background: #ffffff;
+  border: 0.2rem solid #333;
+  box-sizing: border-box;
+}
+.active .switch {
+  left: 4rem;
+}
+
+.active .switch {
+  background: #ffffff;
+  border-color: black;
+}
