@@ -1,8 +1,7 @@
-from flask import Flask, redirect, url_for, request
-from flask_cors import CORS, cross_origin
+from jinja2 import Environment, FileSystemLoader
 import json
 import feedparser
-import os
+import time
 
 url = "https://444.hu/feed"
 photo_url='https://4cdn.hu/kraken/image/upload/'
@@ -25,15 +24,11 @@ def ping():
         })
     return posts
 
-app = Flask(__name__)
-cors = CORS(app)
-app.config['CORS_HEADERS'] = 'Content-Type'
+feed = ping()
 
-@app.route('/feed')
-@cross_origin()
-def feed():
-   return json.dumps(ping())
+env = Environment(loader=FileSystemLoader('templates'))
+template = env.get_template('index.html')
+output_from_parsed_template = template.render(time = time.ctime(), feed = feed)
 
-
-if __name__ == '__main__':
-   app.run(debug = True, host='0.0.0.0', port=os.environ['PORT'])
+with open("index.html", "w") as fh:
+    fh.write(output_from_parsed_template)

@@ -24,5 +24,5 @@ const loadFeed = async () => {
 
 window.onload = () => {
   setSwitch()
-  loadFeed()
+  // loadFeed()
 }
