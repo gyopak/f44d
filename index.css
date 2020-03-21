@@ -87,7 +87,7 @@ path.dark {
 }
 
 .post-body > blockquote.dark {
-  color: white;
+  color: black;
 }
 
 .post-body > p > * {
@@ -103,13 +103,32 @@ path.dark {
   margin-bottom: 1rem;
 }
 
+.post-body > p > mark.dark {
+  color: black;
+}
+
+.post-body > h2 {
+  margin: 2rem 0.5rem 0;
+  text-decoration: underline;
+}
+
 .post-body > ul {
   padding: 1rem 2rem 0;
 }
 
+
+
 .post-body > ul > li {
   font-size: 1.5rem;
   padding-bottom: 1rem;
+}
+
+.post-body > ul > li > a {
+  color: black;
+}
+
+.post-body > ul > li > a.dark {
+  color: white;
 }
 
 .post-body > p.dark {
