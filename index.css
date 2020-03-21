@@ -135,6 +135,10 @@ path.dark {
   color: white;
 }
 
+blockquote.dark > p {
+  color: white;
+}
+
 
 
 .post.open > .post-body {

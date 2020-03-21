@@ -28,11 +28,14 @@ def ping():
         })
     return posts
 
-feed = ping()
 
-env = Environment(loader=FileSystemLoader('templates'))
-template = env.get_template('index.html')
-output_from_parsed_template = template.render(time = time.ctime(), feed = feed)
+def render():
+    feed = ping()
+    env = Environment(loader=FileSystemLoader('templates'))
+    template = env.get_template('index.html')
+    output_from_parsed_template = template.render(time = time.ctime(), feed = feed)
+    with open("index.html", "w") as fh:
+        fh.write(output_from_parsed_template)
 
-with open("index.html", "w") as fh:
-    fh.write(output_from_parsed_template)
+render()
+
