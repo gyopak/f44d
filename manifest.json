@@ -1,0 +1,8 @@
+{
+  "name": "f44d",
+  "short_name": "f44d",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "black",
+  "description": "A simply readable 444 app."
+}
