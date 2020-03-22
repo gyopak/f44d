@@ -139,6 +139,10 @@ blockquote.dark > p {
   color: white;
 }
 
+.jeti-html, .jeti-roadblock, .ad {
+  display: none;
+}
+
 
 
 .post.open > .post-body {

@@ -18,7 +18,7 @@ def ping():
     for feed in get_feed():
         content = feed.content[0].value
         content = re.sub(r'https://embed.rtl+', '', content)
-        content = re.sub(r'iframe+', '', content)
+        content = re.sub(r'<iframe+', '', content)
         content = re.sub(r'https://twitter+', '', content)
         content = re.sub(r'src="/+', '', content)
         content = re.sub(r'xlink:href+', '', content)
