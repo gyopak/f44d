@@ -100,7 +100,7 @@ path.dark {
 }
 
 .post-body > p > *.dark {
-  color: white;
+  color: #ffff73;
 }
 
 .post-body > p > mark {
