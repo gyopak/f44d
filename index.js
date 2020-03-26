@@ -38,8 +38,16 @@ const setTheme = () => {
   }
 }
 
+const setMenu = () => {
+  document.querySelector('.chevron').onclick = e => {
+    document.querySelector('.chevron').classList.toggle('open')
+    document.querySelector('.menu').classList.toggle('open')
+  }
+}
+
 window.onload = () => {
   setSwitch()
   setPosts()
+  // setMenu()
   setTheme()
 }

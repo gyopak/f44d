@@ -13,7 +13,7 @@
 
 <body>
     <header>
-        <div class="logo">
+        <a href="/" class="logo">
             <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
                 y="0px" viewBox="0 0 101.4 34.4" style="enable-background:new 0 0 101.4 34.4;" xml:space="preserve">
                 <style type="text/css">
@@ -46,12 +46,14 @@
                     </g>
                 </g>
             </svg>
-        </div>
+        </a>
         <div class='switch-wrapper active'>
             <div class='switch'>
             </div>
         </div>
+        <!-- <div class="chevron"></div> -->
     </header>
+    <div class="menu"></div>
     <div class="posts">
         <div class="line"></div>
         {% for post in feed %}
@@ -60,7 +62,7 @@
             <div class="post-body">
                 <div class="sub-header">
                     <div class="author">{{ post.author }}</div>
-                    <div>{{ post.date }}</div>
+                    <div class="date">{{ post.date }}</div>
                 </div>
                 {{ post.content }}
             </div>

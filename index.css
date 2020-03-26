@@ -16,6 +16,11 @@ header {
     border-bottom: 4px solid black;
 }
 
+body {
+  width: 100vw;
+  overflow-x: hidden;
+}
+
 header.dark {
     background: rgba(0,0,0,0.3);
     border-bottom: 4px solid #ffff73;
@@ -171,11 +176,56 @@ blockquote.dark > p {
 }
 
 .author {
+  color: black;
   margin-right: 2rem;
 }
 
 .author.dark {
   color: #ffff73;
+}
+
+.date {
+  color: black;
+}
+
+.date.dark {
+  color: white;
+}
+
+.chevron::before {
+	border-style: solid;
+	border-width: 0.25em 0.25em 0 0;
+	content: '';
+	display: inline-block;
+	height: 1rem;
+	position: relative;
+	top: 1rem;
+	transform: rotate(-45deg);
+	vertical-align: top;
+	width: 1rem;
+  right: 1rem;
+  transition: transform 0.25s ease-in;
+	transform: rotate(-135deg);
+  position: absolute;
+}
+
+.chevron.open::before {
+  transform: rotate(-315deg);
+}
+
+.menu {
+  width: 100vw;
+  right: calc(-100vw - 3px);
+  position: fixed;
+  height: calc(100vh - 2.5rem);
+  border-left: 3px solid black;
+  top: calc(2.5rem + 2px);
+  background: white;
+  max-width: 650px;
+}
+
+.menu.open {
+  right: 0;
 }
 
 .switch-wrapper {
