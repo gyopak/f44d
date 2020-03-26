@@ -143,8 +143,6 @@ blockquote.dark > p {
   display: none;
 }
 
-
-
 .post.open > .post-body {
   display: block;
 }
@@ -164,6 +162,20 @@ blockquote.dark > p {
 .posts.dark, body.dark {
   color: white;
   background: black;
+}
+
+.sub-header {
+  display: flex;
+  justify-content: start;
+  padding: 1rem 0.5rem 0 0.5rem;
+}
+
+.author {
+  margin-right: 2rem;
+}
+
+.author.dark {
+  color: #ffff73;
 }
 
 .switch-wrapper {

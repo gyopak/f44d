@@ -57,7 +57,13 @@
         {% for post in feed %}
         <div class="post">
             <h2 class="opener">{{ post.title }}</h2>
-            <div class="post-body">{{ post.content }}</div>
+            <div class="post-body">
+                <div class="sub-header">
+                    <div class="author">{{ post.author }}</div>
+                    <div>{{ post.date }}</div>
+                </div>
+                {{ post.content }}
+            </div>
         </div>
         {% endfor %}
     </div>

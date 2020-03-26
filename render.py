@@ -16,6 +16,8 @@ def get_feed():
 def ping():
     posts = []
     for feed in get_feed():
+        date = feed.published.split(', ')[1]
+        date = date.split('+')[0]
         content = feed.content[0].value
         content = re.sub(r'https://embed.rtl+', '', content)
         content = re.sub(r'<iframe+', '', content)
@@ -25,7 +27,7 @@ def ping():
         posts.append({
             "author": feed.author,
             "title": feed.title,
-            "date": feed.published,
+            "date": date,
             "content": content,
         })
     return posts
