@@ -8,7 +8,7 @@ const toggleTheme = () => {
 }
 
 const setSwitch = () => {
-  document.querySelector('.switch-wrapper').onclick = e => {
+  document.querySelector('.theme-switch').onclick = e => {
     toggleTheme();
     document.querySelector('.switch-wrapper').classList.toggle('active')
   }
@@ -48,6 +48,6 @@ const setMenu = () => {
 window.onload = () => {
   setSwitch()
   setPosts()
-  // setMenu()
+  setMenu()
   setTheme()
 }

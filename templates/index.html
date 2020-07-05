@@ -9,6 +9,11 @@
     <link rel="manifest" href="manifest.json">
     <script src="index.js"></script>
     <title>f44d</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22>
+        <text y=%22.9em%22 font-size=%2290%22>
+          🇭🇺
+        </text>
+      </svg>">
 </head>
 
 <body>
@@ -47,13 +52,37 @@
                 </g>
             </svg>
         </a>
-        <div class='switch-wrapper active'>
-            <div class='switch'>
-            </div>
-        </div>
-        <!-- <div class="chevron"></div> -->
+        <div class="chevron"></div>
     </header>
-    <div class="menu"></div>
+    <div class="menu">
+        <div class="menu-line theme-switch">
+            <div class="menu-label">🌙</div>
+            <div class='switch-wrapper active'>
+                <div class='switch'></div>
+            </div>
+            <div class="menu-label">🔆</div>
+        </div>
+        <div class="menu-line">
+            <a class="bmc-button" target="_blank" href="https://github.com/gyopak/f44d">
+                <span>🔗 github</span>
+            </a>
+        </div>
+        <div class="menu-line">
+            <a class="bmc-button" target="_blank" href="https://444.hu">
+                <span>🔗 !!444!!</span>
+            </a>
+        </div>
+        <div class="menu-line">
+            <a class="bmc-button" target="_blank" href="mailto:gyorgypakozdi@gmail.com">
+                <span>👋 say hi</span>
+            </a>
+        </div>
+        <div class="menu-line">
+            <a class="bmc-button" target="_blank" href="https://www.buymeacoffee.com/gyopak">
+                <span>🍕 feed me</span>
+            </a>
+        </div>
+    </div>
     <div class="posts">
         <div class="line"></div>
         {% for post in feed %}

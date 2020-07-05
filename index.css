@@ -71,6 +71,11 @@ path.dark {
 
 .post > h2 {
   font-size: 2rem;
+  color: white;
+}
+
+.post > h2.dark {
+  color: black;
 }
 
 .post > .post-body {
@@ -112,10 +117,14 @@ path.dark {
 .post-body > p > mark {
   display: block;
   margin-bottom: 1rem;
+  margin-top: 1rem;
+  background-color: transparent;
+  font-style: italic;
+  color: black;
 }
 
 .post-body > p > mark.dark {
-  color: black;
+  color: white;
 }
 
 .post-body > h2 {
@@ -213,10 +222,15 @@ blockquote.dark > p {
   transition: transform 0.25s ease-in;
 	transform: rotate(-135deg);
   position: absolute;
+  border-color: black;
 }
 
 .chevron.open::before {
   transform: rotate(-315deg);
+}
+
+.chevron.dark::before {
+  border-color: white;
 }
 
 .menu {
@@ -226,12 +240,29 @@ blockquote.dark > p {
   height: calc(100vh - 2.5rem);
   border-left: 3px solid black;
   top: calc(2.5rem + 2px);
-  background: white;
-  max-width: 650px;
+  max-width: 13rem;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+
+.menu.dark {
+  border-left: 3px solid#ffff73;
+  background: rgba(0,0,0,0.3);
 }
 
 .menu.open {
   right: 0;
+}
+
+.menu-line {
+  position: relative;
+  margin: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu-label {
+  font-size: 2rem;
 }
 
 .switch-wrapper {
@@ -241,8 +272,8 @@ blockquote.dark > p {
   position: absolute;
   border: 0.2rem solid #333;
   overflow: hidden;
-  top: 1.5rem;
-  right: -1.5rem;
+  top: 1.4rem;
+  right: 1.4rem;
   transform: translate(-50%, -50%);
   border-radius: 2rem;
   transition: all 0.35s ease;
@@ -263,7 +294,7 @@ blockquote.dark > p {
   width: 1.05rem;
   left: 0.25rem;
   top: 0.25rem;
-  border-radius: 1.5rem;
+  border-radius: 1.4rem;
   background: #ffffff;
   border: 0.2rem solid #333;
   box-sizing: border-box;
@@ -272,7 +303,38 @@ blockquote.dark > p {
   left: 2.25rem;
 }
 
+.theme-switch {
+  margin-bottom: 4.5rem;
+}
+
 .active .switch {
   background: #ffffff;
   border-color: black;
+}
+
+.bmc-button {
+  width: 100%;
+  height: 2.5rem;
+  text-decoration: none;
+  background-color: #EEEEEE;
+  border-radius: 30px;
+  border: 3px solid black;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  padding-left: 1.7rem;
+}
+
+.bmc-button > span {
+  font-weight: 500;
+  color: black;
+}
+
+.bmc-button.dark {
+  background-color: black;
+  border: 3px solid #ffff73;
+}
+
+.bmc-button.dark > span {
+  color: white;
 }
