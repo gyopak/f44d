@@ -6,14 +6,21 @@
 }
 
 header {
-    zoom: 0.8;
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
     position: fixed;
+    z-index: 1;
+    top: 0;
     width: 100%;
     height: 3rem;
     display: flex;
     border-bottom: 4px solid black;
+}
+
+.content {
+  position: absolute;
+  width: 100vw;
+  margin-top: 3rem;
 }
 
 body {
@@ -61,8 +68,6 @@ path.dark {
   max-width: 1000px;
   margin: auto;
   overflow: hidden;
-  padding-top: 3rem;
-  
 }
 
 .post {
@@ -230,7 +235,7 @@ blockquote.dark > p {
 }
 
 .chevron.dark::before {
-  border-color: white;
+  border-color: #ffff73;
 }
 
 .menu {
@@ -239,7 +244,7 @@ blockquote.dark > p {
   position: fixed;
   height: calc(100vh - 2.5rem);
   border-left: 3px solid black;
-  top: calc(2.5rem + 2px);
+  top: calc(3rem + 4px);
   max-width: 13rem;
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);

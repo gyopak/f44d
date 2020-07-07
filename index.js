@@ -19,6 +19,8 @@ const setPosts = () => {
       p.onclick = e => {
         if(e.target.classList.contains('opener')) {
           e.currentTarget.classList.toggle('open')
+          document.querySelector('.chevron').classList.remove('open')
+          document.querySelector('.menu').classList.remove('open')
         }
       }
     })
@@ -39,7 +41,7 @@ const setTheme = () => {
 }
 
 const setMenu = () => {
-  document.querySelector('.chevron').onclick = e => {
+  document.querySelector('header').onclick = e => {
     document.querySelector('.chevron').classList.toggle('open')
     document.querySelector('.menu').classList.toggle('open')
   }
